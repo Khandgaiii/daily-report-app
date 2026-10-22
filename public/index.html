@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>日報一覧</title>
+
+    <link
+        rel="stylesheet"
+        href="styles.css">
+
+</head>
+
+<body class="">
+
+    <div class="page-header">
+
+        <h1>日報一覧</h1>
+        <button
+            class="btn-primary"
+            onclick="window.location.href='create.html'">
+
+            新規登録
+
+        </button>
+
+    </div>
+        <div class="dashboard-cards">
+        <div class="dashboard-card">
+            <h3>今月の日報</h3>
+            <span id="monthlyCount">0</span>
+            <small>件</small>
+        </div>
+        <div class="dashboard-card">
+            <h3>直近7日間</h3>
+            <span id="weeklyCount">0</span>
+            <small>件</small>
+        </div>
+    </div>
+    <div class="dashboard-section">
+        <h2>最近の日報</h2>
+        <div id="recentReports"></div>
+    </div>
+    <div
+        id="flashMessage"
+        class="flash-message">
+    </div>
+
+    <div class="search-panel">
+
+        <div class="search-row">
+
+            <div class="search-item">
+
+                <label>
+                    日付（開始）
+                </label>
+
+                <input
+                    type="date"
+                    id="fromDate">
+
+            </div>
+
+            <div class="search-item">
+
+                <label>
+                    日付（終了）
+                </label>
+
+                <input
+                    type="date"
+                    id="toDate">
+
+            </div>
+
+            <div class="search-item">
+
+                <label>
+                    担当者名
+                </label>
+
+                <input
+                    type="text"
+                    id="userName">
+
+            </div>
+
+            <div class="search-item">
+
+                <label>
+                    キーワード
+                </label>
+
+                <input
+                    type="text"
+                    id="keyword">
+
+            </div>
+
+        </div>
+
+        <div class="search-buttons">
+
+            <button
+                class="btn-primary"
+                onclick="loadReports()">
+
+                検索
+
+            </button>
+
+            <button
+                class="btn-secondary"
+                onclick="clearFilters()">
+
+                クリア
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="table-card">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>日付</th>
+                    <th>担当者</th>
+                    <th>件名</th>
+                    <th>作業内容</th>
+                    <th>工数</th>
+                    <th>ステータス</th>
+                    <th>編集</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody
+                id="reportTable">
+            </tbody>
+
+        </table>
+        <div id="pagination" class="pagination"></div>
+    </div>
+
+    <script src="js/list.js"></script>
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日報詳細</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="card">
+
+    <h1>日報詳細</h1>
+
+    <div class="detail-row">
+        <strong>ID</strong>
+        <span id="id"></span>
+    </div>
+
+    <div class="detail-row">
+        <strong>日付</strong>
+        <span id="reportDate"></span>
+    </div>
+
+    <div class="detail-row">
+        <strong>担当者名</strong>
+        <span id="userName"></span>
+    </div>
+
+    <div class="detail-row">
+        <strong>件名</strong>
+        <span id="title"></span>
+    </div>
+
+    <div class="detail-row">
+        <strong>作業内容</strong>
+        <span id="content"></span>
+    </div>
+
+    <div class="detail-row">
+        <strong>工数</strong>
+        <span id="hours"></span>
+    </div>
+
+    <div class="detail-row">
+        <strong>ステータス</strong>
+        <span id="status"></span>
+    </div>
+
+    <div class="detail-row">
+        <strong>作成日時</strong>
+        <span id="createdAt"></span>
+    </div>
+
+    <div class="detail-row">
+        <strong>更新日時</strong>
+        <span id="updatedAt"></span>
+    </div>
+
+    <div class="button-row">
+
+        <button
+            class="btn-primary"
+            onclick="goEdit()">
+            編集
+        </button>
+
+        <button
+            class="btn-dupe"
+            onclick="copyReport()">
+            複製
+        </button>
+
+        <button
+            class="btn-secondary"
+            onclick="window.location.href='index.html'">
+            一覧へ戻る
+        </button>
+
+    </div>
+
+</div>
+
+<script src="js/detail.js"></script>
+
+</body>
+</html>

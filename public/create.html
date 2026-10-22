@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日報登録</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="card">
+    <h1>日報登録</h1>
+    <label>日付</label>
+    <input
+        type="date"
+        id="reportDate">
+    <label>担当者名</label>
+    <input
+        type="text"
+        id="userName"
+        maxlength="50">
+    <label>件名</label>
+    <input
+        type="text"
+        id="title"
+        maxlength="100">
+    <label>作業内容</label>
+    <textarea
+        id="content"
+        rows="6"
+        maxlength="1000"></textarea>
+    <label>工数（時間）</label>
+    <input
+        type="number"
+        id="hours"
+        min="0.5"
+        max="24"
+        step="0.5">
+
+    <label>ステータス</label>
+    <select id="status">
+        <option value="未着手">
+            未着手
+        </option>
+        <option value="進行中">
+            進行中
+        </option>
+        <option value="完了">
+            完了
+        </option>
+    </select>
+    <div
+        id="errorBox"
+        class="error-box">
+    </div>
+    <div class="button-row">
+        <button
+            class="btn-primary"
+            onclick="saveReport()">
+            登録
+        </button>
+        <button
+            class="btn-secondary"
+            onclick="window.location.href='index.html'">
+            一覧へ戻る
+        </button>
+    </div>
+</div>
+<script src="js/create.js"></script>
+</body>
+</html>
